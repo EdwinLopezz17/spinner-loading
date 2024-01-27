@@ -1,0 +1,53 @@
+
+.loader, span, .spinner{
+    position: absolute;
+    width: 200px;
+    height: 200px;
+}
+
+span{
+    line-height: 200px;
+    padding-left: 40px;
+    font-size: 20px;
+    letter-spacing: 1px;
+    color: palevioletred;
+    text-shadow: 
+        0 0 0 black,
+        0 0 2px pink,
+        0 0 4px pink,
+        0 0 6px pink,
+        0 0 8px pink,
+        0 0 10px pink;
+}
+
+.spinner{
+    border-radius: 50%;
+    box-shadow: 
+        3px 0 1px -1px pink,
+        5px 0 5px pink,
+        inset -10px 0 10px -5px pink;
+    animation: loading 1s linear infinite;
+}
+
+.spinner::before{
+    position: absolute;
+    width: 160px;
+    height: 160px;
+    margin: 10% 0 0 10%;
+    border-radius: 50%;
+    content: " ";
+    box-shadow: 
+        2px 0 1px -1px goldenrod,
+        10px 0 5px -5px pink,
+        inset -3px 0 3px pink;
+}
+
+@keyframes loading {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
